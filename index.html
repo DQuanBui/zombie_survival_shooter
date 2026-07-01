@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead Zone: Zombie Survival</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="gameShell">
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud">
+      <div class="hud-left">
+        <div class="title">DEAD ZONE</div>
+        <div class="sub">Zombie Survival Shooter</div>
+      </div>
+
+      <div class="hud-center">
+        <div class="stat-card">
+          <span>Wave</span>
+          <strong id="waveText">1</strong>
+        </div>
+        <div class="stat-card">
+          <span>Score</span>
+          <strong id="scoreText">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Kills</span>
+          <strong id="killsText">0</strong>
+        </div>
+      </div>
+
+      <div class="hud-right">
+        <div class="weapon" id="weaponText">PISTOL</div>
+        <div class="ammo" id="ammoText">12 / 12</div>
+      </div>
+    </div>
+
+    <div id="bars">
+      <div class="bar-block">
+        <span>Health</span>
+        <div class="bar"><div id="healthBar" class="bar-fill health"></div></div>
+      </div>
+      <div class="bar-block">
+        <span>Stamina</span>
+        <div class="bar"><div id="staminaBar" class="bar-fill stamina"></div></div>
+      </div>
+      <div class="bar-block">
+        <span>XP</span>
+        <div class="bar"><div id="xpBar" class="bar-fill xp"></div></div>
+      </div>
+    </div>
+
+    <div id="startScreen" class="screen active">
+      <div class="panel">
+        <h1>DEAD ZONE</h1>
+        <p class="tagline">Survive the night. Upgrade your gear. Hold the line.</p>
+
+        <div class="controls">
+          <p><b>WASD</b> Move</p>
+          <p><b>Mouse</b> Aim</p>
+          <p><b>Left Click</b> Shoot</p>
+          <p><b>R</b> Reload</p>
+          <p><b>Shift</b> Dash</p>
+          <p><b>1 / 2 / 3</b> Switch Weapon</p>
+          <p><b>P</b> Pause</p>
+        </div>
+
+        <button id="startBtn">Start Mission</button>
+      </div>
+    </div>
+
+    <div id="pauseScreen" class="screen">
+      <div class="panel small">
+        <h2>Paused</h2>
+        <p>Press <b>P</b> to continue.</p>
+      </div>
+    </div>
+
+    <div id="upgradeScreen" class="screen">
+      <div class="panel upgrade-panel">
+        <h2>Choose an Upgrade</h2>
+        <p class="tagline">You survived long enough to get stronger.</p>
+        <div id="upgradeChoices" class="upgrade-grid"></div>
+      </div>
+    </div>
+
+    <div id="gameOverScreen" class="screen">
+      <div class="panel">
+        <h1>MISSION FAILED</h1>
+        <p class="tagline">The city has fallen... for now.</p>
+        <div class="final-stats">
+          <p>Final Score: <b id="finalScore">0</b></p>
+          <p>Waves Survived: <b id="finalWave">1</b></p>
+          <p>Total Kills: <b id="finalKills">0</b></p>
+        </div>
+        <button id="restartBtn">Restart</button>
+      </div>
+    </div>
+
+    <div id="toast"></div>
+  </div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
