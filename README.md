@@ -1,5 +1,7 @@
 # Dead Zone: Zombie Survival Shooter
 
+![](https://github.com/DQuanBui/zombie_survival_shooter/blob/main/zombie.jpg)
+
 ## Project Overview
 
 **Dead Zone: Zombie Survival Shooter** is an interactive browser-based action game built with **HTML, CSS, and JavaScript**. The game challenges players to survive waves of zombies by moving, aiming, shooting, reloading, switching weapons, and managing health and stamina.
